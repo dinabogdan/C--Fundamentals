@@ -1,4 +1,5 @@
 ﻿using System;
+using CodingConventionsDemo.SomeNamespace;
 
 namespace CodingConventionsDemo
 {
@@ -60,6 +61,8 @@ namespace CodingConventionsDemo
     {
         static void Main(string[] args)
         {
+            AnotherClass anotherClassInstance = new AnotherClass();
+
             var x = 0;
             var y = 0;
 
