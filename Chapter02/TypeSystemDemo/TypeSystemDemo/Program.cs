@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace TypeSystemDemo
 {
@@ -97,6 +98,17 @@ namespace TypeSystemDemo
             var someInferredDecimal = 10.123M;
             Console.WriteLine($"typeof(someDecimal)={someDecimal.GetType()}; minValue(decimal)={decimal.MinValue}; maxValue(decimal)={decimal.MaxValue}");
             Console.WriteLine($"typeof(someInferredDecimal)={someInferredDecimal.GetType()}; minValue(decimal)={decimal.MinValue}; maxValue(decimal)={decimal.MaxValue}");
+
+            //4. Boolean
+
+            bool _true = true;
+            bool _false = false;
+
+            var someInferredTrue = true;
+
+            Console.WriteLine($"Variable: '{nameof(_true)}' has type: {_true.GetType()} and value: {_true}");
+            Console.WriteLine($"Variable: '{nameof(_false)}' has type: {_false.GetType()} and value: {_false}");
+            Console.WriteLine($"Variable: '{nameof(someInferredTrue)}' has type: {someInferredTrue.GetType()} and value: {someInferredTrue}");
         }
     }
 }
