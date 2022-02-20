@@ -38,6 +38,8 @@ namespace TypeSystemDemo
             var someClassValue = new SomeClass();
 
             // Basic Types
+
+            //1. Integer numbers
             System.Byte oneByte = 1;
             byte byteInCSharp = 1;
 
@@ -45,7 +47,6 @@ namespace TypeSystemDemo
             int int32InCSharp = 32;
 
             // byte <=> System.Byte - 8 bits
-
             byte someByte = 10;
             Console.WriteLine($"typeof(someByte)={someByte.GetType()}; minValue(byte)={byte.MinValue}; maxValue(byte)={byte.MaxValue}");
 
@@ -76,6 +77,26 @@ namespace TypeSystemDemo
             // long <=> System.Int64 - 64
             long someLong = -1000000;
             Console.WriteLine($"typeof(someLong)={someLong.GetType()}; minValue(long)={long.MinValue}; maxValue(long)={long.MaxValue}");
+
+            //2. Floating-point numbers
+
+            // float <=> System.Single - 32 bits
+            float someFloat = 12345;
+            var someInferredFloat = 12345f;
+            Console.WriteLine($"typeof(someFloat)={someFloat.GetType()}; minValue(float)={float.MinValue}; maxValue(float)={float.MaxValue}");
+            Console.WriteLine($"typeof(someInferredFloat)={someInferredFloat.GetType()}; minValue(float)={float.MinValue}; maxValue(float)={float.MaxValue}");
+
+            // double <=> System.Double - 64 bits
+            double someDouble = 123456;
+            var someInferredDouble = 123456d;
+            Console.WriteLine($"typeof(someDouble)={someDouble.GetType()}; minValue(double)={double.MinValue}; maxValue(double)={double.MaxValue}");
+            Console.WriteLine($"typeof(someInferredDouble)={someInferredDouble.GetType()}; minValue(double)={double.MinValue}; maxValue(double)={double.MaxValue}");
+
+            //3. Decimal numbers
+            decimal someDecimal = 10;
+            var someInferredDecimal = 10.123M;
+            Console.WriteLine($"typeof(someDecimal)={someDecimal.GetType()}; minValue(decimal)={decimal.MinValue}; maxValue(decimal)={decimal.MaxValue}");
+            Console.WriteLine($"typeof(someInferredDecimal)={someInferredDecimal.GetType()}; minValue(decimal)={decimal.MinValue}; maxValue(decimal)={decimal.MaxValue}");
         }
     }
 }
