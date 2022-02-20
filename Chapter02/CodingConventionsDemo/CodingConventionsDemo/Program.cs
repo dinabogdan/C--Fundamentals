@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using CodingConventionsDemo.SomeNamespace;
 
 namespace CodingConventionsDemo
@@ -59,15 +60,15 @@ namespace CodingConventionsDemo
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             AnotherClass anotherClassInstance = new AnotherClass();
-
+        
             var x = 0;
             var y = 0;
-
+        
             // Curly braces indentation style
-            if (x == y) 
+            if (x == y)
             {
                 Console.WriteLine("X is equal to Y");
             }
