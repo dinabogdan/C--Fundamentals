@@ -18,7 +18,7 @@ namespace TypeSystemDemo
     // 1.2 Struct as Value Type
     struct SomeStruct
     {
-        
+
     }
 
     // 2. Reference Types
@@ -26,7 +26,7 @@ namespace TypeSystemDemo
     // 2.1 Class as Reference Type
     class SomeClass
     {
-        
+
     }
 
     class Program
@@ -100,7 +100,6 @@ namespace TypeSystemDemo
             Console.WriteLine($"typeof(someInferredDecimal)={someInferredDecimal.GetType()}; minValue(decimal)={decimal.MinValue}; maxValue(decimal)={decimal.MaxValue}");
 
             //4. Boolean
-
             bool _true = true;
             bool _false = false;
 
@@ -109,6 +108,23 @@ namespace TypeSystemDemo
             Console.WriteLine($"Variable: '{nameof(_true)}' has type: {_true.GetType()} and value: {_true}");
             Console.WriteLine($"Variable: '{nameof(_false)}' has type: {_false.GetType()} and value: {_false}");
             Console.WriteLine($"Variable: '{nameof(someInferredTrue)}' has type: {someInferredTrue.GetType()} and value: {someInferredTrue}");
+
+            //5. Chars and Strings
+
+            char someCharacter = 'a';
+            var someInferredCharacter = 'b';
+
+            Console.WriteLine($"Variable: '{nameof(someCharacter)}' has type: {someCharacter.GetType()} and value: {someCharacter}");
+            Console.WriteLine($"Variable: '{nameof(someInferredCharacter)}' has type: {someInferredCharacter.GetType()} and value: {someInferredCharacter}");
+
+            string someString = "some string value";
+            var someInferredString = "some inferred string value";
+
+            Console.WriteLine($"Variable: '{nameof(someString)}' has type: {someString.GetType()} and value: {someString}");
+
+            var upperSomeString = someString.ToUpper();
+            Console.WriteLine($"Value of {nameof(someString)} is {someString}");
+            Console.WriteLine($"Value of {nameof(upperSomeString)} is {upperSomeString}");
         }
     }
 }
