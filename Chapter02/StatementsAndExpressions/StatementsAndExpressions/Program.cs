@@ -63,7 +63,29 @@ namespace StatementsAndExpressions
             }
             else
             {
-                Console.Write("x is equal to 3");
+                Console.WriteLine("x is equal to 3");
+            }
+
+            // 4. Switch
+
+            var sport = "Tennis";
+
+            switch (sport)
+            {
+                case "Football":
+                    Console.WriteLine("We are Europeans");
+                    Console.WriteLine("Let's watch Uefa Champions League!");
+                    Console.WriteLine("Crying on football matches");
+                    break;
+                case "Soccer":
+                    Console.WriteLine("We are Americans");
+                    Console.WriteLine("Better watch NFL and American Football");
+                    Console.WriteLine("Baseball is a great sport");
+                    break;
+                default:
+                    Console.WriteLine("No football or soccer at all :( ");
+                    Console.WriteLine("Hopefully we will play tennis");
+                    break;
             }
         }
     }
