@@ -87,6 +87,33 @@ namespace StatementsAndExpressions
                     Console.WriteLine("Hopefully we will play tennis");
                     break;
             }
+
+            // 5. While
+
+            var t = 3;
+
+            while (t < 10)
+            {
+                Console.WriteLine($"While condition evaluated to true for value of 't': {t}");
+                t++;
+            }
+
+            // 6. Do-While
+
+            var m = 3;
+
+            do
+            {
+                m++;
+                Console.WriteLine($"Do while condition evaluated to true for value of 'm': {m}");
+            } while (m < 10);
+
+            // 7. For 
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"Value of 'i': {i}");
+            }
         }
     }
 }
