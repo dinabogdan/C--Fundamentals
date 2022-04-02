@@ -5,11 +5,8 @@ namespace MethodsAndFunctions
     class Program
     {
         // Methods with parameters
-
-        static int Sum(int x, int y)
-        {
-            return x + y;
-        }
+        // Expression-bodied method
+        static int Sum(int x, int y) => x + y;
 
         // out parameters method definition
         static int Divide(int x, int y, out int remainder)
