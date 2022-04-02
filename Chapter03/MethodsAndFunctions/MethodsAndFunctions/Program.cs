@@ -49,6 +49,8 @@ namespace MethodsAndFunctions
 
         static void Main(string[] args)
         {
+            "Hello, world!".Show();
+
             var five = GiveMeFive();
             Console.WriteLine(five);
 
