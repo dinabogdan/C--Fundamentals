@@ -51,6 +51,16 @@ namespace AdvancedOOP
 
             Console.WriteLine(ferrari.Description);
             Console.WriteLine(rollsRoyce.Description);
+
+            Impl implInstance = new Impl
+            {
+                Base1Property = "PropertyValue",
+                Base2Property = 10
+            };
+
+            implInstance.Base1Method();
+            implInstance.Base2Method();
+            implInstance.Method();
         }
     }
 }
