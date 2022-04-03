@@ -26,6 +26,31 @@ namespace AdvancedOOP
 
             cat.MakeNoise();
             dog.MakeNoise();
+
+            Car ferrari = new Ferrari
+            {
+                Color = "Red",
+                Manufacturer = "Ferrari",
+                Year = 2020,
+            };
+
+            Car rollsRoyce = new RollsRoyce
+            {
+                Color = "Black",
+                Manufacturer = "RollsRoyce",
+                Year = 2022
+            };
+
+            ferrari.Start();
+            ferrari.Honking();
+            ferrari.Stop();
+
+            rollsRoyce.Start();
+            rollsRoyce.Honking();
+            rollsRoyce.Stop();
+
+            Console.WriteLine(ferrari.Description);
+            Console.WriteLine(rollsRoyce.Description);
         }
     }
 }
