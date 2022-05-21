@@ -8,6 +8,14 @@ namespace Collections
 {
     internal class Program
     {
+        static IEnumerable<int> Countdown(int start, int end)
+        {
+            for(int i = start; i >= end; --i)
+            {
+                yield return i;
+            }
+        }
+
         static void Main(string[] args)
         {
             // 1. Generic collections vs Raw collections
@@ -66,7 +74,25 @@ namespace Collections
 
             // 5. Removing elements from collection
             stringToInts.Remove("3");
-            Console.WriteLine($"stringToInts key '3' {stringToInts["3"]}");
+            // Console.WriteLine($"stringToInts key '3' {stringToInts["3"]}"); - it will produce IndexOutOfRangeException
+
+            // Enumerators
+            List<int>.Enumerator enumerator = ints.GetEnumerator();
+            while(enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.Current);
+            }
+            // is equivalent to
+            foreach(var number in ints)
+            {
+                Console.WriteLine(number);
+            }
+
+            // Iterators
+            foreach(int i in Countdown(5, 1))
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
