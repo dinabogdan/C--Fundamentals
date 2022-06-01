@@ -64,7 +64,6 @@ namespace Collections
             // 3. Add elements to collections
             stringToInts.Add("2", 2);
 
-
             // 4. Updating collection elements
             ints[0] = 10;
             stringToInts["3"] = 3;
