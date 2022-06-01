@@ -63,6 +63,29 @@ namespace Generics
             // 2. Generic extension method
             var listOfInts = new List<int> { };
             listOfInts.AddOneElement(1);
+
+            // 3. Variance
+
+            // 3.1 Covariance
+            var tvProducer = new TVProducer();
+            var phoneProducer = new PhoneProducer();
+            IProducer<Item> tvProducer2 = new TVProducer();
+
+            // 3.2 Contravariance
+            var computerCategoryOwner = new ComputerCategoryOwner();
+            var tvCategoryOwner = new TVCategoryOwner();
+
+            var tvMarketCategory = new ItemMarketCategory<TV> { CategoryOwner = tvCategoryOwner };
+            tvMarketCategory.AddPrice(new TV { Brand = "Samsung" }, 1000);
+            tvMarketCategory.AddPrice(new TV { Brand = "LG" }, 900);
+
+            var computerMarketCategory = new ItemMarketCategory<Computer> { CategoryOwner = computerCategoryOwner };
+            computerMarketCategory.AddPrice(new Computer { Brand = "Apple Macbook Pro" }, 1000);
+
+            var phoneCategoryOwner = new ItemCategoryOwner{  };
+            var phoneMarketCategory = new ItemMarketCategory<Phone> { CategoryOwner = phoneCategoryOwner }; // compile-time error
+
+
         }
     }
 }
